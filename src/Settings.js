@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import ReactSlider from "react-slider";
 import BackButton from "./BackButton";
+import RestoreDefaultsButton from "./RestoreDefaultsButton";
 import SettingsContext from "./SettingsContext";
 
 function Settings() {
@@ -38,7 +39,14 @@ function Settings() {
                 max={60}
             />
             <div style={{ textAlign: 'center', marginTop: '20px' }}>
-                <BackButton onClick={() => settingsInfo.setShowSettings(false)}/>
+                <RestoreDefaultsButton onClick={() => {
+                    settingsInfo.setWorkMinutes(25);
+                    settingsInfo.setShortMinutes(5);
+                    settingsInfo.setLongMinutes(20);
+                }} />
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                <BackButton onClick={() => settingsInfo.setShowSettings(false)} />
             </div>
         </div>
     );
