@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import PauseButton from './PauseButton';
 import PlayButton from './PlayButton';
+import StopButton from './StopButton';
 import SettingsButton from './SettingsButton';
 import SettingsContext from './SettingsContext';
 
@@ -66,6 +67,7 @@ function Timer() {
             secondsLeftRef.current = nextSeconds;
         }
 
+        // Initializes first (work) timer
         secondsLeftRef.current = settingsInfo.workMinutes * 60;
         setSecondsLeft(secondsLeftRef.current);
 
@@ -158,6 +160,16 @@ function Timer() {
                 {isPaused
                     ? <PlayButton onClick={() => { setIsPaused(false); isPausedRef.current = false; }} />
                     : <PauseButton onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />}
+                <StopButton onClick={() => {
+                    setIsPaused(true);
+                    isPausedRef.current = true;
+                    setMode('work');
+                    modeRef.current = 'work';
+                    setSecondsLeft(settingsInfo.workMinutes * 60);
+                    secondsLeftRef.current = settingsInfo.workMinutes * 60;
+                    setCounter(0);
+                    counterRef.current = 0;
+                }} />
             </div>
             <div style={{ marginTop: '20px' }}>
                 <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />

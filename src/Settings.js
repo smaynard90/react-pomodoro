@@ -7,18 +7,17 @@ function Settings() {
     const settingsInfo = useContext(SettingsContext);
     return (
         <div style={{ textAlign: 'left' }}>
-            <label>Work: {settingsInfo.workMinutes}:00</label>
+            <label>Work: {settingsInfo.workMinutes} minute(s)</label>
             <ReactSlider
                 className={'slider work'}
                 thumbClassName={'thumb'}
                 trackClassName={'track'}
                 value={settingsInfo.workMinutes}
+                onChange={newValue => settingsInfo.setWorkMinutes(newValue)}
                 min={1}
                 max={60}
-                onChange={newValue => settingsInfo.setWorkMinutes(newValue)}
-                renderThumb={(props, state) => <div {...props}>{state.valueNow}:00</div>}
             />
-            <label>Short Break: {settingsInfo.shortMinutes}:00</label>
+            <label>Short Break: {settingsInfo.shortMinutes} minute(s)</label>
             <ReactSlider
                 className={'slider short'}
                 thumbClassName={'thumb'}
@@ -28,7 +27,7 @@ function Settings() {
                 min={1}
                 max={60}
             />
-            <label>Long Break: {settingsInfo.longMinutes}:00</label>
+            <label>Long Break: {settingsInfo.longMinutes} minute(s)</label>
             <ReactSlider
                 className={'slider long'}
                 thumbClassName={'thumb'}
