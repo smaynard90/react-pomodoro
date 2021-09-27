@@ -8,7 +8,8 @@ function Settings() {
     const settingsInfo = useContext(SettingsContext);
     return (
         <div style={{ textAlign: 'left' }}>
-            <label>Work: {settingsInfo.workMinutes} minute(s)</label>
+        <h1 style={{ textAlign: 'center' }}>Configure Timers</h1>
+            <label><strong>Work:</strong> {settingsInfo.workMinutes} minute(s)</label>
             <ReactSlider
                 className={'slider work'}
                 thumbClassName={'thumb'}
@@ -18,7 +19,7 @@ function Settings() {
                 min={1}
                 max={60}
             />
-            <label>Short Break: {settingsInfo.shortMinutes} minute(s)</label>
+            <label><strong>Short Break:</strong> {settingsInfo.shortMinutes} minute(s)</label>
             <ReactSlider
                 className={'slider short'}
                 thumbClassName={'thumb'}
@@ -28,7 +29,7 @@ function Settings() {
                 min={1}
                 max={60}
             />
-            <label>Long Break: {settingsInfo.longMinutes} minute(s)</label>
+            <label><strong>Long Break:</strong> {settingsInfo.longMinutes} minute(s)</label>
             <ReactSlider
                 className={'slider long'}
                 thumbClassName={'thumb'}
