@@ -90,7 +90,7 @@ function Timer() {
 
             tick();
             console.log(counterRef.current);
-        }, 5);
+        }, 1000);
 
         return () => clearInterval(interval);
     }, [settingsInfo]);
