@@ -1,6 +1,3 @@
-# Credits
-This project is just a modified version of [this React tutorial](https://www.youtube.com/watch?v=B1tjrnX160k), originally written by [David Paszko](https://github.com/dejwid). I added the Stop Button feature and Reset Defaults feature as well as the Long Break Timer based on the [Pomodoro technique description](https://en.wikipedia.org/wiki/Pomodoro_Technique#Description)
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -71,3 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Credits
+This project is just a modified version of [this React tutorial](https://www.youtube.com/watch?v=B1tjrnX160k), originally written by [David Paszko](https://github.com/dejwid). I added the Stop Button feature and Reset Defaults feature as well as the Long Break Timer based on the [Pomodoro technique description](https://en.wikipedia.org/wiki/Pomodoro_Technique#Description)
